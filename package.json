@@ -1,9 +1,9 @@
 {
-  "name": "todo",
+  "name": "todoApp",
   "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm install",  // Modify as necessary
+    "start": "node server.js"  // Replace 'server.js' with your entry point file
   },
   "author": "",
   "license": "ISC",
