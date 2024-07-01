@@ -3,6 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require('body-parser');
 const Todo = require("./models/Todos");
+require('dotenv').config();
 
 const app = express();
 
@@ -13,7 +14,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
 
 // Connect to the database
-mongoose.connect("mongodb+srv://gameryounes555:Xl8o2cYvzbYUMoCL@cluster0.2xhvbdc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+mongoose.connect(process.env.MONGO_URI)
     .then(() => {
         console.log("Connected to database");
     })
